@@ -1,0 +1,14 @@
+[package]
+name = "nat-xdp-ebpf"
+edition = "2021"
+
+[[bin]]
+name = "nat-xdp"
+path = "src/main.rs"
+
+[dependencies]
+aya-ebpf.workspace = true
+aya-log-ebpf.workspace = true
+
+[build-dependencies]
+which.workspace = true

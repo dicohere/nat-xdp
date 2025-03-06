@@ -1,0 +1,27 @@
+[package]
+name = "nat-xdp"
+edition = "2021"
+
+[[bin]]
+name = "nat-xdp"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+aya.workspace = true
+aya-log.workspace = true
+clap.workspace = true
+tokio = { workspace = true, features = [
+    "macros",
+    "rt",
+    "rt-multi-thread",
+    "net",
+    "signal",
+] }
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+[build-dependencies]
+anyhow.workspace = true
+aya-build.workspace = true
+nat-xdp-ebpf = { path = "../ebpf" }

@@ -1,0 +1,11 @@
+{
+	"name": "Rust",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"capAdd": [
+		"CAP_NET_ADMIN",
+		"CAP_BPF",
+		"CAP_PERFMON"
+	]
+}
